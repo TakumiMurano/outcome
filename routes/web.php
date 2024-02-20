@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/', [ThreadController::class, 'index']);
 
+Route::get('/threads/create', [ThreadController::class, 'create']);
+
 Route::get('/threads/{thread}', [ThreadController::class ,'show']);
 // '/threads/{対象データのID}'にGetリクエストが来たら、ThreadControllerのshowメソッドを実行する
 

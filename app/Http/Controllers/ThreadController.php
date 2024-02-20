@@ -17,4 +17,8 @@ class ThreadController extends Controller
         return view('threads.show')->with(['thread' => $thread]);
         //'thread'はbladeファイルで使う変数。中身は$threadがid=1のPostインスタンス。
     }
+    public function create()
+    {
+        return view('threads.create');
+    }
 }

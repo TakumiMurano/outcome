@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Football掲示板プレミア</h1>
+        <a href="/threads/create">スレッドを作成しよう！</a>
         <div class="threads">
             @foreach ($threads as $thread)
                 <div class="thread">
