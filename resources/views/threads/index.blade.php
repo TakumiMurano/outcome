@@ -11,7 +11,9 @@
         <div class="threads">
             @foreach ($threads as $thread)
                 <div class="thread">
-                    <h2 class="title">{{ $thread->title }}</h2>
+                    <h2 class="title">
+                        <a href="/threads/{{ $thread->id }}">{{ $thread->title }}</a>
+                    </h2>
                     <p class="foreignId">{{ $thread->topic_id }} {{ $thread->competition_id }}</p>
                     <p class="comment">{{ $thread->comment }}</p>
                 </div>
