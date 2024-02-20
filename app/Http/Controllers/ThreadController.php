@@ -9,7 +9,7 @@ class ThreadController extends Controller
 {
     public function index(Thread $thread)
     {
-        return $thread->get();
+        return view('threads.index')->with(['threads' => $thread->get()]);
     }
-    //Threadクラス(モデルクラス)から新しいインスタンス$threadを作り、$threadの中身を戻り値にする
+    //blade内で使う変数'threads'と設定。'threads'の中身にgetを使い、インスタンス化した$threadを代入。
 }

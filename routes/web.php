@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', [ThreadController::class, 'index']);
+
 Route::get('/threads', [ThreadController::class, 'index']);
 
 Route::get('/dashboard', function () {
