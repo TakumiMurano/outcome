@@ -9,7 +9,7 @@ class ThreadController extends Controller
 {
     public function index(Thread $thread)
     {
-        return view('threads.index')->with(['threads' => $thread->get()]);
+        return view('threads.index')->with(['threads' => $thread->getPaginateByLimit()]);
     }
     //blade内で使う変数'threads'と設定。'threads'の中身にgetを使い、インスタンス化した$threadを代入。
     public function show(Thread $thread)
@@ -20,5 +20,11 @@ class ThreadController extends Controller
     public function create()
     {
         return view('threads.create');
+    }
+    public function store(Request $request, Thread $thread)
+    {
+        $input = $request['thread'];
+        $thread->fill($input)->save();
+        return redirect('/threads/' . $thread->id);
     }
 }

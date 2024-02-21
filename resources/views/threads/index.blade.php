@@ -15,10 +15,11 @@
                     <h2 class="title">
                         <a href="/threads/{{ $thread->id }}">{{ $thread->title }}</a>
                     </h2>
-                    <p class="foreignId">{{ $thread->topic_id }} {{ $thread->competition_id }}</p>
-                    <p class="comment">{{ $thread->comment }}</p>
                 </div>
             @endforeach
+        </div>
+        <div class='paginate'>
+            {{ $threads->links() }}
         </div>
     </body>
 </html>
