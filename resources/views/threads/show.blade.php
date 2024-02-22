@@ -17,7 +17,7 @@
                 </div>
         </div>
         <div class="footer">
-            <a href="/">一覧へ</a>
+            <a href="/threads">一覧へ</a>
         </div>
     </body>
 </html>
